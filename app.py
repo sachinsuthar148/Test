@@ -4,6 +4,12 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # Simulate Azure Function
+
+#home route
+@app.route("/")
+def home():
+    return "<h1> Server is working very well.</br> Check How_To_Run.txt file in folder and check the APIs in POST method </h1>"
+
 # This function represents a service that processes input data and returns a result.
 def simulate_function(input_data):
     # Process the input data (e.g., perform some computation or transformation)
